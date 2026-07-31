@@ -1,3 +1,5 @@
+import random
+
 class Plant:
     def __init__(self, plant_name, variety, category):
         self.plant_name = plant_name
@@ -30,6 +32,27 @@ def print_garden_bed(garden_bed):
     for plant in garden_bed.list_of_plants:
         print(f"- {plant.plant_name} {plant.variety}")
     print(f"Number of plants: {garden_bed.number_of_plants}")
+
+def random_garden_bed():
+    number_of_plants = random.randint(1, 20)
+
+    plants = []
+
+    for i in range(number_of_plants):
+        plant = Plant(
+            plant_name=f"Plant-{i + 1}",
+            variety="Unknown",
+            category="Random"
+        )
+        plants.append(plant)
+
+    garden_bed = GardenBed(
+        bed_name="Random garden bed",
+        list_of_plants=plants
+    )
+
+    return garden_bed
+
 
 class Tree:
     def __init__(self, species, variety, approximate_age):
@@ -75,6 +98,10 @@ def run_example():
 
     vegetable_bed_1 = GardenBed(bed_name="Vegetable bed next to the grapevine", list_of_plants=[calendula,raspberry_tomato,san_marzano_tomato,black_hungarian, ethiopian_brown, beet, carrot, cosmos])
     print_garden_bed(vegetable_bed_1)
+    print(10 * "-")
+
+    random_bed = random_garden_bed()
+    print_garden_bed(random_bed)
     print(10 * "-")
 
     quince_tree_1 = Tree(species="Quince", variety="oblonga", approximate_age=10)
