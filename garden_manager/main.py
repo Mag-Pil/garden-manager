@@ -6,14 +6,14 @@ from garden_manager.garden.tree import Tree
 from garden_manager.garden.garden_task import GardenTask
 
 def run_example():
-    calendula = Plant(plant_name="Calendula", variety="officinalis", category="Flowers")
-    raspberry_tomato = Plant(plant_name="Tomato", variety="Raspberry", category="Vegetables")
-    san_marzano_tomato = Plant(plant_name="Tomato", variety="San Marzano", category="Vegetables")
-    black_hungarian = Plant(plant_name="Pepper", variety="Black Hungarian", category="Vegetables")
-    ethiopian_brown = Plant(plant_name="Pepper", variety="Ethiopian Brown", category="Vegetables")
-    beet = Plant(plant_name="Beet", variety="red", category="Vegetables")
-    carrot = Plant(plant_name="Carrot", variety="Berlikumer", category="Vegetables")
-    cosmos = Plant(plant_name="Cosmos", variety="bipinnatus", category="Flowers")
+    calendula = Plant(plant_name="Calendula", variety="officinalis", category="Flowers", plant_spacing=0.25)
+    raspberry_tomato = Plant(plant_name="Tomato", variety="Raspberry", category="Vegetables", plant_spacing=0.5)
+    san_marzano_tomato = Plant(plant_name="Tomato", variety="San Marzano", category="Vegetables", plant_spacing=0.5)
+    black_hungarian = Plant(plant_name="Pepper", variety="Black Hungarian", category="Vegetables", plant_spacing=0.4)
+    ethiopian_brown = Plant(plant_name="Pepper", variety="Ethiopian Brown", category="Vegetables", plant_spacing=0.4)
+    beet = Plant(plant_name="Beet", variety="red", category="Vegetables", plant_spacing=0.1)
+    carrot = Plant(plant_name="Carrot", variety="Berlikumer", category="Vegetables", plant_spacing=0.05)
+    cosmos = Plant(plant_name="Cosmos", variety="bipinnatus", category="Flowers", plant_spacing=0.3)
     calendula.print_plant()
     raspberry_tomato.print_plant()
     san_marzano_tomato.print_plant()

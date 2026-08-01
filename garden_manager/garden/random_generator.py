@@ -11,7 +11,8 @@ def random_garden_bed():
         plant = Plant(
             plant_name=f"Plant-{i + 1}",
             variety="Unknown",
-            category="Random"
+            category="Random",
+            plant_spacing=0.25
         )
         plants.append(plant)
 

@@ -22,3 +22,4 @@ class GardenBed:
         for plant in self.list_of_plants:
             print(f"- {plant.plant_name} {plant.variety}")
         print(f"Number of plants: {self.number_of_plants}")
+
