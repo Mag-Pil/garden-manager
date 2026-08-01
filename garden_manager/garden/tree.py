@@ -5,5 +5,5 @@ class Tree:
         self.approximate_age = int(approximate_age)
 
 
-def print_tree(tree):
-    print(f"Species: {tree.species}, variety: {tree.variety}, approximate age: {tree.approximate_age} years")
+    def print_tree(self):
+        print(f"Species: {self.species}, variety: {self.variety}, approximate age: {self.approximate_age} years")

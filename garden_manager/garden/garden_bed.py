@@ -16,9 +16,9 @@ class GardenBed:
         self.number_of_plants = number_of_plants
 
 
-def print_garden_bed(garden_bed):
-    print(f"Garden bed: {garden_bed.bed_name}")
-    print(f"List of plants:")
-    for plant in garden_bed.list_of_plants:
-        print(f"- {plant.plant_name} {plant.variety}")
-    print(f"Number of plants: {garden_bed.number_of_plants}")
+    def print_garden_bed(self):
+        print(f"Garden bed: {self.bed_name}")
+        print(f"List of plants:")
+        for plant in self.list_of_plants:
+            print(f"- {plant.plant_name} {plant.variety}")
+        print(f"Number of plants: {self.number_of_plants}")

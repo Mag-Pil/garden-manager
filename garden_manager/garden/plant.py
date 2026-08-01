@@ -5,5 +5,5 @@ class Plant:
         self.category = category
 
 
-def print_plant(plant):
-    print(f"Plant name: {plant.plant_name}, variety: {plant.variety}, category: {plant.category}")
+    def print_plant(self):
+        print(f"Plant name: {self.plant_name}, variety: {self.variety}, category: {self.category}")
