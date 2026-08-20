@@ -6,10 +6,14 @@ The project is based on a real allotment garden and is being developed as I lear
 
 ## Current features
 
-- storing information about plants and their varieties
-- organizing plants into garden beds
+- storing information about plants, varieties and recommended spacing
+- creating plantings with plant type and quantity
+- calculating the required area for individual plantings
+- organizing plantings into garden beds
+- calculating the total required area for a garden bed
 - storing information about trees
 - tracking garden tasks
+- generating random garden beds for testing
 
 ## Planned development
 
