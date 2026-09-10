@@ -10,28 +10,38 @@ class GardenBed:
 
         self.list_of_plantings = list_of_plantings
 
+    def __len__(self):
         number_of_plants = 0
-        for planting in list_of_plantings:
-            number_of_plants += planting.quantity
+        for planting in self.list_of_plantings:
+            number_of_plants += int(planting)
 
-        self.number_of_plants = number_of_plants
+        return number_of_plants
 
-    def calculate_required_area(self):
-        total_area = 0
+    def __float__(self):
+        total_area = 0.0
 
         for planting in self.list_of_plantings:
-            total_area += planting.calculate_required_area()
+            total_area += float(planting)
 
         return total_area
 
-
-
-    def print_garden_bed(self):
-        print(f"Garden bed: {self.bed_name}")
-        print(f"Plantings:")
+    def __str__(self):
+        planting_txt = ""
         for planting in self.list_of_plantings:
-            planting.print_planting()
+            planting_txt += str(planting) + "\n"
 
-        print(f"Number of plants: {self.number_of_plants}")
-        print(f"Required ares: {self.calculate_required_area():.2f} m2")
+        return (
+            f"Garden bed: {self.bed_name}\n"
+            f"Plantings:\n"
+            f"{planting_txt}"
+            f"Number of plants: {len(self)}\n"
+            f"Required area: {float(self):.2f} m2"
+        )
 
+    def __bool__(self):
+        return len(self) > 0
+
+    def __eq__(self, other):
+        if self.__class__ != other.__class__:
+            return NotImplemented
+        return self.bed_name == other.bed_name and self.list_of_plantings == other.list_of_plantings

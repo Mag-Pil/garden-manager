@@ -117,6 +117,8 @@ def run_example():
     tree_pruning_1 = GardenTask(task_name="Tree pruning", garden_part="smaller orchard", execution_status="postponed until winter")
     print_garden_task(tree_pruning_1)
 
+    planting = Planting
+
 if __name__ == '__main__':
     run_example()
 

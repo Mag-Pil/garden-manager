@@ -5,5 +5,12 @@ class Tree:
         self.approximate_age = int(approximate_age)
 
 
-    def print_tree(self):
-        print(f"Species: {self.species}, variety: {self.variety}, approximate age: {self.approximate_age} years")
+    def __str__(self):
+        return (
+            f"Species: {self.species}, variety: {self.variety}, approximate age: {self.approximate_age} years"
+        )
+
+    def __repr__(self):
+        return (
+            f"<Species: {self.species}, variety: {self.variety}, approximate age: {self.approximate_age} years>"
+        )

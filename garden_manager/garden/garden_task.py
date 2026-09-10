@@ -5,8 +5,10 @@ class GardenTask:
         self.execution_status = execution_status
 
 
-    def print_garden_task(self):
-        print(f"Task name: {self.task_name}")
-        print(f"Garden part: {self.garden_part}")
-        print(f"Execution status: {self.execution_status}")
+    def __str__(self):
+        return (
+            f"Task name: {self.task_name}\n"
+            f"Garden part: {self.garden_part}\n"
+            f"Execution status: {self.execution_status}"
+        )
 
