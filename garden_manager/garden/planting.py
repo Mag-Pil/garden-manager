@@ -9,14 +9,6 @@ class Planting:
     def __float__(self):
         return self.quantity * (self.plant.plant_spacing ** 2)
 
-    def __add__(self, other):
-        all_plants = int(self) + int(other)
-        return all_plants
-
-    def __eq__(self, other):
-        if self.__class__ != other.__class__:
-            return NotImplemented
-        return self.plant == other.plant and self.quantity == other.quantity
 
     def __str__(self):
         return (

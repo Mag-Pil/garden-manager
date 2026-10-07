@@ -24,6 +24,7 @@ def random_garden_bed():
 
         garden_bed = GardenBed(
             bed_name="Random garden bed",
+            capacity=random.randint(1,50),
             list_of_plantings=plantings
         )
 

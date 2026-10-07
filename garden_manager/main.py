@@ -47,6 +47,7 @@ def run_example():
 
     vegetable_bed_1 = GardenBed(
         bed_name="Vegetable bed next to the grapevine",
+        capacity=4.5,
         list_of_plantings=[
             Planting(calendula,3),
             Planting(raspberry_tomato,5),
@@ -58,59 +59,19 @@ def run_example():
             Planting(cosmos, 3)
         ]
     )
-    vegetable_bed_1_str = str(vegetable_bed_1)
-    print(vegetable_bed_1_str)
-    print(len(vegetable_bed_1))
-    print(bool(vegetable_bed_1))
+    print(vegetable_bed_1)
     print(10 * "-")
 
-    vegetable_bed_2 = GardenBed(
-        bed_name="Empty vegetable bed",
-        list_of_plantings=[]
-    )
-
-    vegetable_bed_2_copy = GardenBed(
-        bed_name="Empty vegetable bed",
-        list_of_plantings=[]
-    )
-
-    vegetable_bed_2_str = str(vegetable_bed_2)
-    print(vegetable_bed_2_str)
-    print(len(vegetable_bed_2))
-    print(bool(vegetable_bed_2))
+    vegetable_bed_1.add_plant_to_gardenbed(calendula, 1)
+    print(vegetable_bed_1)
     print(10 * "-")
 
-    print(f"{vegetable_bed_1} \n== \n{vegetable_bed_2}")
-    print(vegetable_bed_1 == vegetable_bed_2)
+    vegetable_bed_1.add_plant_to_gardenbed(san_marzano_tomato, 12)
+    print(vegetable_bed_1)
     print(10 * "-")
 
-    print(f"{vegetable_bed_2} \n== \n{vegetable_bed_2_copy}")
-    print(vegetable_bed_2 == vegetable_bed_2_copy)
-    print(10 * "-")
-
-    raspberry_tomatoes_bed_1 = Planting(plant=raspberry_tomato, quantity=5)
-    raspberry_tomatoes_bed_1_str = str(raspberry_tomatoes_bed_1)
-    print(raspberry_tomatoes_bed_1_str)
-    print(10 * "-")
-
-    raspberry_tomatoes_bed_2 = Planting(plant=raspberry_tomato, quantity=2)
-    raspberry_tomatoes_bed_2_str = str(raspberry_tomatoes_bed_2)
-    print(raspberry_tomatoes_bed_2_str)
-    print(10 * "-")
-
-    all_plants = raspberry_tomatoes_bed_1 + raspberry_tomatoes_bed_2
-    print(all_plants)
-    print(10 * "-")
-
-    print(f"{raspberry_tomatoes_bed_1} == {raspberry_tomatoes_bed_2}")
-    print(raspberry_tomatoes_bed_1 == raspberry_tomatoes_bed_2)
-    raspberry_tomatoes_bed_3 = Planting(plant=raspberry_tomato, quantity=5)
-    print(f"{raspberry_tomatoes_bed_3} == {raspberry_tomatoes_bed_1}")
-    print(raspberry_tomatoes_bed_3 == raspberry_tomatoes_bed_1)
-    print(10 * "-")
-
-    random_bed = random_garden_bed()
-    random_bed_str = str(random_bed)
+    garden_bed = random_garden_bed()
+    random_bed_str = str(garden_bed)
     print(random_bed_str)
     print(10 * "-")
 
